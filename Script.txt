@@ -1,0 +1,25 @@
+/* script which will read a text file and display all words which contain numbers */
+
+var fileText = ReadTextFromFile(fileName);
+var wordWithNumberList = new List<string>();
+var words = fileText.Split(" ");
+
+foreach (var word in words) {
+  if (word.Contains("0")
+      || word.Contains("1")
+      || word.Contains("2")
+      || word.Contains("3")
+      || word.Contains("4")
+      || word.Contains("5")
+      || word.Contains("6")
+      || word.Contains("7")
+      || word.Contains("8")
+      || word.Contains("9")) {
+    wordWithNumberList.Add(word);
+  }
+}
+
+/* Display found words */
+foreach (var word in wordWithNumberList) {
+  Console.WriteLine(word);
+}
